@@ -281,6 +281,9 @@ const updateUserAvatar = asyncHandler(async (req, res) => {
     },
     { new: true }
   ).select("-password");
+
+  // TODO: delete old image - assignment
+  
   return res
     .status(200)
     .json(new ApiResponse(200, user, "Avatar updated successfully"));
